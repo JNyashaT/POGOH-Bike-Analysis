@@ -1,3 +1,5 @@
+#Using the exported csv files from the "POGOH Locations" Jupyter Notebook, I can create a map to visualize the different types of locations.
+
 setwd("C:/Users/jahza/PycharmProjects/POGOH Bikes Project/Pittsburgh Locations")
 library(sf)
 library(dplyr)
@@ -13,4 +15,4 @@ Supermarkets = st_as_sf(supermarkets, coords = c("longitude", "latitude"), crs =
 Terminals = st_as_sf(terminals, coords = c("Longitude", "Latitude"), crs = 4326)
 
 mapview(Assets, col.regions = "darkcyan") + mapview(Supermarkets, col.regions = "darkgoldenrod4") +
-  mapview(Terminals, col.regions = "darksalmon")
+mapview(Terminals, col.regions = "darksalmon")
